@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     public List<Segment> segments = new List<Segment>();
 
     //Gameplay
-    private bool isMoving = false;
+    private bool IsMoving = false;
 
     private void Awake()
     {
@@ -94,7 +94,6 @@ public class LevelManager : MonoBehaviour
     {
         List<Segment> possibleSeg = availableSegments.FindAll(x => x.beginY1 == y1 || x.beginY2 == y2 || x.beginY3 == y3);
         int id = Random.Range(0, possibleSeg.Count);
-
         Segment s = GetSegment(id, false);
 
         y1 = s.endY1;
